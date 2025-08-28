@@ -1,16 +1,18 @@
 import { useState } from 'react';
-import { RefreshCw, Activity, TrendingUp } from 'lucide-react';
+import { RefreshCw, Activity, TrendingUp, Wallet } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { CryptoCard } from '@/components/CryptoCard';
 import { SearchBar } from '@/components/SearchBar';
 import { LoadingSpinner } from '@/components/LoadingSpinner';
 import { useCrypto } from '@/hooks/useCrypto';
 import { useToast } from '@/hooks/use-toast';
+import { useNavigate } from 'react-router-dom';
 
 const Index = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const { cryptos, loading, error, searchCryptos, refetch } = useCrypto();
   const { toast } = useToast();
+  const navigate = useNavigate();
 
   const filteredCryptos = searchCryptos(searchQuery);
 
@@ -46,6 +48,15 @@ const Index = () => {
                 onChange={setSearchQuery}
                 placeholder="Search cryptocurrencies..."
               />
+              <Button
+                onClick={() => navigate('/wallet')}
+                variant="outline"
+                size="sm"
+                className="bg-card/50 border-border/50 hover:bg-card/80"
+              >
+                <Wallet className="w-4 h-4 mr-2" />
+                Wallet
+              </Button>
               <Button
                 onClick={handleRefresh}
                 variant="outline"

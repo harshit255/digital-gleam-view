@@ -1,12 +1,14 @@
 import { TrendingUp, TrendingDown } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { CryptoCurrency } from '@/types/crypto';
+import { useNavigate } from 'react-router-dom';
 
 interface CryptoCardProps {
   crypto: CryptoCurrency;
 }
 
 export const CryptoCard = ({ crypto }: CryptoCardProps) => {
+  const navigate = useNavigate();
   const isPositive = crypto.price_change_percentage_24h > 0;
   const changeColor = isPositive ? 'text-success' : 'text-destructive';
   const TrendIcon = isPositive ? TrendingUp : TrendingDown;
@@ -32,7 +34,10 @@ export const CryptoCard = ({ crypto }: CryptoCardProps) => {
   };
 
   return (
-    <Card className="group bg-gradient-card backdrop-blur-sm border-border/50 hover:border-primary/50 transition-all duration-500 hover:shadow-card-hover hover:scale-[1.02] cursor-pointer">
+    <Card 
+      className="group bg-gradient-card backdrop-blur-sm border-border/50 hover:border-primary/50 transition-all duration-500 hover:shadow-card-hover hover:scale-[1.02] cursor-pointer"
+      onClick={() => navigate(`/crypto/${crypto.id}`)}
+    >
       <CardContent className="p-6">
         <div className="flex items-start justify-between mb-4">
           <div className="flex items-center space-x-3">
