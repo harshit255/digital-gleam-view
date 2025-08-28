@@ -1,73 +1,84 @@
-# Welcome to your Lovable project
+# 💰 Crypto Price Tracker
 
-## Project info
+A modern React-based web application that provides **real-time cryptocurrency price updates**.  
+Users can search for coins, view daily price changes, and explore detailed coin information fetched from a free crypto API.
 
-**URL**: https://lovable.dev/projects/814bcbb1-ecfb-4e80-97ca-458e215447b6
+---
 
-## How can I edit this code?
+## 🚀 Features
+- 📊 **Live Crypto Prices** – Get real-time updates of top cryptocurrencies.  
+- 🔎 **Search Functionality** – Search coins by name or symbol (e.g., "BTC" for Bitcoin).  
+- 📈 **Detailed Coin Page** – See price, market cap, 24h change, and more.  
+- 📱 **Responsive Design** – Works seamlessly on desktop & mobile.  
+- 🌙 **Dark/Light Mode Toggle** (optional enhancement).  
 
-There are several ways of editing your application.
+---
 
-**Use Lovable**
+## 🛠️ Tech Stack
+- **React (Vite or CRA)** – Frontend framework  
+- **Tailwind CSS** – Styling and responsive UI  
+- **CoinGecko API** – Free cryptocurrency price API  
+- **React Hooks (useState, useEffect)** – State management  
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/814bcbb1-ecfb-4e80-97ca-458e215447b6) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## 📂 Project Structure
+crypto-price-tracker/
+│-- public/ # Static files
+│-- src/
+│ │-- components/ # Reusable UI components (Cards, SearchBar, etc.)
+│ │-- pages/ # Pages (Home, CoinDetails)
+│ │-- App.jsx # Main app file
+│ │-- index.js # Entry point
+│-- package.json
+│-- README.md
 
-**Use your preferred IDE**
+---
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## ⚡ Getting Started
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### 1️⃣ Clone the repo
+```bash
+git clone https://github.com/your-username/crypto-price-tracker.git
+cd crypto-price-tracker
+2️⃣ Install dependencies
+bash
+Copy code
+npm install
+3️⃣ Add API key (if required)
+For APIs like CoinGecko, no key is required.
+If using another API, create a .env file in the root directory:
 
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+ini
+Copy code
+VITE_CRYPTO_API_KEY=your_api_key_here
+4️⃣ Run the project
+bash
+Copy code
 npm run dev
-```
+🌍 API Used
+CoinGecko API – Provides free crypto price data in JSON format.
 
-**Edit a file directly in GitHub**
+🎯 Future Enhancements
+Historical price charts with Recharts / Chart.js
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+User login & portfolio tracking
 
-**Use GitHub Codespaces**
+Favorites / Watchlist feature
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Multi-language support
 
-## What technologies are used for this project?
+📸 Screenshots (Optional)
+Add preview images of your app here once deployed.
 
-This project is built with:
+📝 License
+This project is licensed under the MIT License – feel free to use it and build upon it.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+👨‍💻 Built with ❤️ using React + Tailwind + CoinGecko API
 
-## How can I deploy this project?
+yaml
+Copy code
 
-Simply open [Lovable](https://lovable.dev/projects/814bcbb1-ecfb-4e80-97ca-458e215447b6) and click on Share -> Publish.
+---
 
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+Do you want me to also **add a live deployment section** (Netlify/Vercel setup instructions) so recruiters can directly check the hosted project from your README?
